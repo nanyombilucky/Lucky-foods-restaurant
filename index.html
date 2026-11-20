@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lucky Foods - Fresh local food and drinks in Kampala, Uganda. Order online and send your order straight to WhatsApp.">
+    <meta name="keywords" content="Lucky Foods, Ugandan food, katogo, pilau, matooke, Kampala restaurant, order on WhatsApp">
+    <meta name="theme-color" content="#0a8f1c">
+    <title>Lucky Foods - Fresh Local Food & Drinks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container nav">
+            <a href="#home" class="logo">🍀 Lucky <span>Foods</span></a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+                    🛒 <span class="cart-btn-label">Cart</span>
+                    <span class="badge" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+            <span class="status-pill" id="openStatus">Checking hours…</span>
+            <h1>Fresh Ugandan food,<br><em>straight to your door.</em></h1>
+            <p>Pick your meal, fill the basket, and your order lands in our WhatsApp in one tap. No app, no account.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-light">🍽️ Browse the Menu</a>
+                <a href="#" class="btn btn-ghost" id="heroWhatsApp">💬 Chat on WhatsApp</a>
+            </div>
+            <ul class="hero-facts">
+                <li><strong id="itemCountStat">9</strong> dishes &amp; drinks</li>
+                <li><strong>7am–10pm</strong> every day</li>
+                <li><strong>Delivery</strong> or pickup</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== MENU (rendered by script.js) ===== -->
+    <section class="section" id="menu">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Our Menu</h2>
+                <p class="section-sub">Cooked fresh daily in Kampala. Tap “Add” to build your order.</p>
+            </div>
+
+            <div class="menu-toolbar">
+                <div class="filters" id="filters" role="tablist"></div>
+                <label class="search">
+                    <span aria-hidden="true">🔍</span>
+                    <input type="search" id="searchInput" placeholder="Search food or drinks…" autocomplete="off">
+                </label>
+            </div>
+
+            <div class="menu-grid" id="menuGrid"></div>
+            <p class="no-results" id="noResults" hidden>No items match your search. Try something else 🙂</p>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section steps-section">
+        <div class="container">
+            <h2 class="section-title">How ordering works</h2>
+            <ol class="steps">
+                <li><span>1</span><h3>Pick your food</h3><p>Add dishes and drinks to your cart and adjust quantities.</p></li>
+                <li><span>2</span><h3>Fill in your details</h3><p>Name, phone, and delivery address or pickup.</p></li>
+                <li><span>3</span><h3>Send on WhatsApp</h3><p>Your full order opens in WhatsApp, ready to send to us.</p></li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+        <div class="container about-grid">
+            <img src="images/katogo.jpg" alt="A plate of katogo" loading="lazy">
+            <div>
+                <h2 class="section-title left">About Lucky Foods</h2>
+                <p>At Lucky Foods, we pride ourselves on serving the freshest local ingredients prepared with care and tradition. Our menu features authentic Ugandan and East African dishes that bring the true taste of home to your table.</p>
+                <p>Whether you're looking for a quick bite or a full meal, we have something for everyone. All our food is prepared daily with love and served with a smile.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title light">Visit Us Today</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📍 Location</h3>
+                    <p>123 Main Street<br>Kampala, Uganda</p>
+                </div>
+                <div class="contact-card">
+                    <h3>📞 Phone / WhatsApp</h3>
+                    <p><a href="tel:+256779671678">+256 779 671 678</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>🕐 Hours</h3>
+                    <p>Monday – Sunday<br>7:00 AM – 10:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year">2026</span> Lucky Foods. All Rights Reserved.</p>
+            <p>Fresh Food • Great Taste • Affordable Prices</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp button -->
+    <a href="#" class="wa-float" id="waFloat" aria-label="Chat with Lucky Foods on WhatsApp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2a13 13 0 0 0 6.6 1.8c7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.5 10.5 0 0 1-1.7-5.7C5.1 10 10 5.3 16 5.3s10.9 4.7 10.9 10.5S22 26.4 16 26.4zm6-7.8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.9-1-3.2-1.7-4.4-3.8-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+    </a>
+
+    <!-- ===== CART DRAWER ===== -->
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="drawer" id="cartDrawer" aria-label="Your order" aria-hidden="true">
+        <div class="drawer-head">
+            <h2>🛒 Your Order</h2>
+            <button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button>
+        </div>
+        <div class="drawer-body" id="cartItems"></div>
+        <div class="drawer-foot">
+            <div class="total-row"><span>Items</span><span id="cartItemsCount">0</span></div>
+            <div class="total-row grand"><span>Total</span><span id="cartTotal">UGX 0</span></div>
+            <button class="btn btn-primary block" id="checkoutBtn" disabled>Proceed to Checkout</button>
+            <button class="link-btn" id="clearCart">Clear cart</button>
+        </div>
+    </aside>
+
+    <!-- ===== CHECKOUT MODAL ===== -->
+    <div class="modal-wrap" id="checkoutModal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-labelledby="checkoutTitle">
+            <div class="modal-head">
+                <h2 id="checkoutTitle">📝 Checkout</h2>
+                <button class="icon-btn" id="closeCheckout" aria-label="Close checkout">✕</button>
+            </div>
+            <form class="modal-body" id="checkoutForm" novalidate>
+                <div class="order-summary" id="orderSummary"></div>
+
+                <div class="field">
+                    <label for="customerName">Full Name *</label>
+                    <input type="text" id="customerName" placeholder="e.g. John Mugabi" autocomplete="name">
+                    <small class="error" data-for="customerName"></small>
+                </div>
+                <div class="field">
+                    <label for="customerPhone">Phone Number *</label>
+                    <input type="tel" id="customerPhone" placeholder="e.g. 0779 123 456" autocomplete="tel">
+                    <small class="error" data-for="customerPhone"></small>
+                </div>
+
+                <div class="field">
+                    <label>Order Type *</label>
+                    <div class="segmented" id="orderType">
+                        <button type="button" class="seg active" data-type="delivery">🛵 Delivery</button>
+                        <button type="button" class="seg" data-type="pickup">🏪 Pickup</button>
+                    </div>
+                </div>
+
+                <div class="field" id="addressField">
+                    <label for="customerAddress">Delivery Address *</label>
+                    <textarea id="customerAddress" placeholder="Street, area, landmark…" autocomplete="street-address"></textarea>
+                    <small class="error" data-for="customerAddress"></small>
+                </div>
+
+                <div class="field">
+                    <label for="orderTime">When do you want it?</label>
+                    <select id="orderTime">
+                        <option value="As soon as possible">As soon as possible</option>
+                        <option value="In 30 minutes">In 30 minutes</option>
+                        <option value="In 1 hour">In 1 hour</option>
+                        <option value="In 2 hours">In 2 hours</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="orderNotes">Special Notes (optional)</label>
+                    <textarea id="orderNotes" placeholder="e.g. Less spicy, extra sauce…"></textarea>
+                </div>
+
+                <label class="remember">
+                    <input type="checkbox" id="rememberMe" checked> Remember my details on this device
+                </label>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" id="cancelCheckout">Cancel</button>
+                    <button type="submit" class="btn btn-wa">📱 Send Order via WhatsApp</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
